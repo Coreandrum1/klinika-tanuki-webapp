@@ -14,7 +14,7 @@ function App() {
         <img
           alt="klinika-tanuki"
           className="klinika-tanuki-logo"
-          src="src/assets/klinika_tanuki_contorno.webp"
+          src="klinika_tanuki_contorno.webp"
         />
         <div className="subtitle-container">
           <h2 className="barlow-condensed-extrabold">MIEMBROS</h2>
