@@ -1,35 +1,67 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <section className="ink-container">
+      <div className="positioner">
+        <div className="main-title-container">
+          <h1 className="londrina-solid-regular">KLINIKA</h1>
+          <h1 className="londrina-solid-regular text-below">TANUKI</h1>
+          <span className="title-badge">
+            <h2 className="big-shoulders-700">colectivo</h2>
+          </span>
+        </div>
+        <img
+          alt="klinika-tanuki"
+          className="klinika-tanuki-logo"
+          src="src/assets/klinika_tanuki_contorno.webp"
+        />
+        <div className="subtitle-container">
+          <h2 className="barlow-condensed-extrabold">MIEMBROS</h2>
+          <div className="members-list">
+            <a
+              className="special-elite-regular"
+              href="https://instagram.com/coriander_escamilla"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @coriander_escamilla
+            </a>
+            <a
+              className="special-elite-regular"
+              href="https://instagram.com/pepperjam_art"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @pepperjam_art
+            </a>
+            <a
+              className="special-elite-regular"
+              href="https://instagram.com/aleescamillapv"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @aleescamillapv
+            </a>
+          </div>
+        </div>
+        <div className="upcoming-container">
+          <div className="upcoming-title">
+            <h2 className="barlow-condensed-extrabold">PRÓXIMO</h2>
+            <h2 className="barlow-condensed-extrabold">EVENTO</h2>
+          </div>
+          <p className="special-elite-regular">Paralelicuaro</p>
+          <div className="event-component special-elite-regular">
+            <div className="digit">09</div>
+            <p className="separator">/</p>
+            <p className="digit">12</p>
+            <p className="separator">/</p>
+            <p className="digit">25</p>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </section>
+  );
 }
 
-export default App
+export default App;
