@@ -1,65 +1,74 @@
 import "./App.css";
+import alice from "./assets/images/alice.webp";
+import kewpie from "./assets/images/kewpie.webp";
+import theBeatles from "./assets/images/the-beatles.webp";
+import kemonitoKuromi from "./assets/images/kemonito-kuromi.webp";
+import axolotl from "./assets/images/axolotl.webp";
+import alienCat from "./assets/images/alien-cat.webp";
+import plushieBrown from "./assets/images/plushie-brown.webp";
+import plushieGreen from "./assets/images/plushie-green.webp";
 
 function App() {
   return (
-    <section className="ink-container">
-      <div className="positioner">
-        <div className="main-title-container">
-          <h1 className="londrina-solid-regular">KLINIKA</h1>
-          <h1 className="londrina-solid-regular text-below">TANUKI</h1>
-          <span className="title-badge">
-            <h2 className="big-shoulders-700">colectivo</h2>
-          </span>
+    <section className="container">
+      <article className="white-card">
+        <h2 className="font-title">Bazar Shop</h2>
+        <div className="image-container">
+          <img className="first-image" src={kewpie} alt="" />
+          <img className="second-image" src={alice} alt="" />
         </div>
-        <img
-          alt="klinika-tanuki"
-          className="klinika-tanuki-logo"
-          src="klinika_tanuki_contorno.webp"
-        />
-        <div className="subtitle-container">
-          <h2 className="barlow-condensed-extrabold">MIEMBROS</h2>
-          <div className="members-list">
-            <a
-              className="special-elite-regular"
-              href="https://instagram.com/coriander_escamilla"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @coriander_escamilla
-            </a>
-            <a
-              className="special-elite-regular"
-              href="https://instagram.com/pepperjam_art"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @pepperjam_art
-            </a>
-            <a
-              className="special-elite-regular"
-              href="https://instagram.com/aleescamillapv"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @aleescamillapv
-            </a>
-          </div>
+        <div className="chip-container">
+          <div className="chip">ropa</div>
+          <div className="chip">coleccionables</div>
+          <div className="chip">materiales</div>
         </div>
-        <div className="upcoming-container">
-          <div className="upcoming-title">
-            <h2 className="barlow-condensed-extrabold">PRÓXIMO</h2>
-            <h2 className="barlow-condensed-extrabold">EVENTO</h2>
-          </div>
-          <p className="special-elite-regular">Paralelicuaro</p>
-          <div className="event-component special-elite-regular">
-            <div className="digit">09</div>
-            <p className="separator">/</p>
-            <p className="digit">12</p>
-            <p className="separator">/</p>
-            <p className="digit">25</p>
-          </div>
+        <p className="description">
+          Le buscamos un nuevo hogar a todos esos objetos olvidados en el tiempo{" "}
+        </p>
+      </article>
+      <article className="outline-card">
+        <h2 className="font-title">stickers</h2>
+        <div className="sticker-container">
+          <img src={theBeatles} alt="" />
+          <img src={kemonitoKuromi} alt="" />
+          <img src={alienCat} alt="" />
+          <img src={axolotl} alt="" />
         </div>
-      </div>
+        <p className="description text-[var(--no-white)]">Diseños propios</p>
+        <div className="chip-container">
+          <div className="chip">@CORIANDER_ESCAMILLA</div>
+          <div className="chip">@PEPPERJAM_ART</div>
+          <div className="chip">@aleescamillapv</div>
+        </div>
+        <button className="content-link">Ver galería</button>
+      </article>
+      <article className="radioactive-card">
+        <h2 className="font-title">Servicios</h2>
+        <div className="service">
+          <div className="chip">diseño gráfico</div>
+          <p>Negocio, redes sociales, tarjetas de presentación</p>
+        </div>
+        <div className="service">
+          <div className="chip">impresión</div>
+          <p>Impresión de stickers, con suaje y laminado</p>
+        </div>
+        <div className="service">
+          <div className="chip">desarrollo web</div>
+          <p>Te creamos tu sitio web o menú interactivo</p>
+        </div>
+      </article>
+      <article className="white-card">
+        <h2 className="font-title">Peluches</h2>
+        <div className="image-container-even">
+          <img className="first-image" src={plushieBrown} alt="" />
+          <img className="second-image" src={plushieGreen} alt="" />
+        </div>
+        <p className="description">Peluches/llavero hechos a mano</p>
+        <div className="chip">@PEPPERJAM_ART</div>
+      </article>
+      <article className="outline-card">
+        <h2 className="font-title">llaveros</h2>
+      </article>
     </section>
   );
 }

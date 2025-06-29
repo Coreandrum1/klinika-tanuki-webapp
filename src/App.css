@@ -1,125 +1,67 @@
-.positioner {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  align-items: center;
-  justify-content: center;
+@reference "tailwindcss";
+.container {
+  @apply flex flex-col items-center h-screen px-2 gap-4;
 }
 
-.main-title-container {
-  display: flex;
-  width: fit-content;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.white-card {
+  @apply text-[var(--no-black)] bg-[var(--no-white)] max-w-xl w-full px-3 pt-2 pb-8 rounded-3xl space-y-3;
 
-  h1 {
-    font-size: 8em;
-    text-align: center;
-  }
+  .image-container {
+    @apply flex flex-row gap-3 justify-start mb-4;
+    img {
+      @apply aspect-square object-cover bg-[var(--no-black)] rounded-3xl select-none;
+    }
 
-  .text-below {
-    padding-left: 2rem;
-  }
-
-  .title-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--radioactive);
-    color: var(--no-black);
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    padding: 2px 12px;
-    align-self: flex-start;
-    rotate: -10deg;
-    transform: translate(0, 0.5rem);
-  }
-}
-
-.klinika-tanuki-logo {
-  width: 40vw;
-  max-width: 22rem;
-  min-width: 20rem;
-  transform: translate(3rem, -5rem);
-  rotate: 10deg;
-  height: auto;
-  user-select: none;
-}
-
-.subtitle-container {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 0.7rem;
-  h2 {
-    font-size: 3rem;
-    color: var(--radioactive);
-  }
-
-  .members-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    a {
-      text-decoration: none;
-      color: var(--no-white);
-      font-size: 1.5rem;
+    .first-image {
+      @apply w-3/9;
+    }
+    .second-image {
+      @apply w-4/9;
     }
   }
 }
 
-.upcoming-container {
-  align-self: self-end;
-  padding-top: 6rem;
-  gap: 0.7rem;
-  flex-direction: column;
-  display: flex;
-  align-items: flex-end;
+.chip-container {
+  @apply flex flex-row gap-2 items-center justify-start flex-wrap;
+}
+.chip {
+  @apply w-fit px-4 py-2 rounded-full uppercase border-2;
+}
 
-  .upcoming-title {
-    display: flex;
-    flex-direction: column;
-    font-size: 2.5rem;
-    color: var(--radioactive);
-    align-items: flex-end;
-  }
-  h2 {
-    font-size: 3rem;
-    color: var(--radioactive);
-  }
+.description {
+  @apply w-4/5;
+}
 
-  p,
-  div {
-    font-size: 1.5rem;
-    color: var(--no-white);
-  }
+.outline-card {
+  @apply text-[var(--radioactive)] max-w-xl w-full px-4 py-4 rounded-3xl space-y-3 border-2;
 
-  .event-component {
-    display: flex;
-    gap: 0.1rem;
+  .sticker-container {
+    @apply grid grid-cols-3 grid-rows-2 gap-2 justify-items-center items-center;
+    > :first-child {
+      @apply col-span-3;
+    }
   }
+}
 
-  .digit {
-    color: var(--no-black);
-    background-color: var(--no-white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.content-link {
+  @apply bg-[var(--radioactive)] text-[var(--no-black)] gap-2 text-base rounded-3xl px-4 py-2 w-full;
+  &:hover {
+    @apply underline;
   }
+}
 
-  .digit:nth-child(1) {
-    transform: rotate(3deg);
-  }
+.radioactive-card {
+  @apply text-[var(--no-black)] bg-[var(--radioactive-light)] max-w-xl w-full px-4 pt-3 pb-8 rounded-3xl space-y-6;
+}
 
-  .digit:nth-child(2) {
-    transform: rotate(12deg);
-  }
+.service {
+  @apply space-y-3;
+}
 
-  .digit:nth-child(3) {
-    transform: rotate(7deg);
+.image-container-even {
+  @apply grid grid-cols-2 gap-3;
+
+  img {
+    @apply object-cover bg-[var(--no-black)] rounded-3xl select-none;
   }
 }
