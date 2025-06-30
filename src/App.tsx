@@ -29,6 +29,7 @@ import { Youtube } from "./assets/icons/Youtube";
 import { Bandcamp } from "./assets/icons/Bandcamp";
 import { Hamburger } from "./assets/icons/Hamburger";
 import { useState } from "react";
+import { Marker } from "./assets/icons/Marker";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -80,8 +81,55 @@ function App() {
           </ul>
         </nav>
       </header>
+
       <main className="wrapper">
         <section className="container">
+          <article className="flex flex-col w-full h-screen gap-4 hero">
+            <div className="hero-content">
+              <a
+                href="https://www.instagram.com/sacrificiobarbarico/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-instagram-link"
+              >
+                <Instagram />
+              </a>
+              <div>
+                <h1 className="hero-title">Klinika</h1>
+                <h1 className="hero-title">Tanuki</h1>
+              </div>
+            </div>
+            <div className="upcoming-events-container">
+              <div className="event-title-container">
+                <Marker />
+                <h2>Próximos eventos</h2>
+              </div>
+              <div className="event-list">
+                <div className="event-item">
+                  <h3>Paralelicuaro</h3>
+                  <h4>09/12/25</h4>
+                </div>
+                <div className="event-item">
+                  <h3>StickerLand</h3>
+                  <h4>09/12/25</h4>
+                </div>
+              </div>
+            </div>
+            <div className="categories-container">
+              <div className="category-chip">bazar</div>
+              <div className="category-chip">art</div>
+              <div className="category-chip">stcikers</div>
+              <div className="category-chip">impresión</div>
+              <div className="category-chip">música</div>
+              <div className="category-chip">artesanías</div>
+            </div>
+            <div className="px-4 ">
+              <p>
+                Colectivo de artistas y creadores independientes de Ensenada,
+                Baja California.
+              </p>
+            </div>
+          </article>
           <article className="white-card">
             <h2 className="font-title">Bazar Shop</h2>
             <div className="image-container">
@@ -177,7 +225,6 @@ function App() {
             </div>
             <button className="content-link dark-scheme">ver galería</button>
           </article>
-
           <article className="sacrificio-card">
             <div className="header-image-container">
               <img src={sbCover} alt="" />
