@@ -1,6 +1,6 @@
 @reference "tailwindcss";
 .container {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-4 px-2 h-auto place-items-start;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4 px-2 h-auto place-items-start mt-16;
 }
 
 .white-card {
@@ -156,6 +156,49 @@
     @apply text-[var(--no-black)] bg-[var(--no-black)] p-3 hover:bg-[var(--radioactive-light)] transition-colors;
     svg {
       @apply w-6 h-6 fill-[var(--no-white)];
+    }
+  }
+}
+
+footer {
+  @apply bg-[var(--no-black)] text-[var(--no-white)] text-center p-4;
+
+  img {
+    @apply aspect-square object-contain w-24 mx-auto mb-2;
+  }
+  .footer-text {
+    @apply text-sm;
+  }
+}
+
+header {
+  @apply w-full bg-[var(--no-black)] top-0 text-[var(--no-white)] fixed z-50 h-16;
+}
+.main-nav {
+  @apply px-4 w-full h-full  flex items-center justify-between bg-[var(--no-black)] text-[var(--no-white)];
+
+  .logo {
+    font-family: "Londrina Solid", sans-serif;
+    @apply text-2xl font-bold uppercase;
+  }
+
+  button {
+    @apply p-2 hover:bg-[var(--radioactive-light)] transition-colors cursor-pointer;
+  }
+
+  svg {
+    @apply w-8 h-8 fill-[var(--radioactive)];
+  }
+}
+
+.mobile-menu {
+  @apply absolute w-full right-0 lg:w-md text-[var(--no-black)] z-50 transition-all;
+
+  .menu-list {
+    @apply rounded-3xl flex flex-col items-end justify-center gap-4 p-4 bg-[var(--radioactive-light)];
+    li {
+      @apply text-3xl font-bold uppercase;
+      font-family: "Barlow Condensed", sans-serif;
     }
   }
 }
