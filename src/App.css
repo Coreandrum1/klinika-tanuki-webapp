@@ -221,7 +221,7 @@ header {
       rgba(42, 36, 37, 0) 90%,
       rgba(42, 36, 37, 0) 100%
     ),
-    url("./src/assets/images/hero.webp");
+    url("src/assets/images/hero.webp");
   background-size: cover;
   background-repeat: no-repeat;
 }
