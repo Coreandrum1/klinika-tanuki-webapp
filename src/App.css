@@ -1,10 +1,10 @@
 @reference "tailwindcss";
 .container {
-  @apply flex flex-col items-center h-screen px-2 gap-4;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4 px-2 h-auto place-items-start;
 }
 
 .white-card {
-  @apply text-[var(--no-black)] bg-[var(--no-white)] max-w-xl w-full px-3 pt-2 pb-8 rounded-3xl space-y-3;
+  @apply text-[var(--no-black)] bg-[var(--no-white)] max-w-md w-full px-3 pt-2 pb-8 rounded-3xl space-y-3;
 
   .image-container {
     @apply flex flex-row gap-3 justify-start mb-4;
@@ -33,7 +33,7 @@
 }
 
 .outline-card {
-  @apply text-[var(--radioactive)] max-w-xl w-full px-4 py-4 rounded-3xl space-y-3 border-2;
+  @apply text-[var(--radioactive)] max-w-md w-full px-4 py-4 rounded-3xl space-y-3 border-2;
 
   .sticker-container {
     @apply grid grid-cols-3 grid-rows-2 gap-2 justify-items-center items-center;
@@ -51,7 +51,7 @@
 }
 
 .radioactive-card {
-  @apply text-[var(--no-black)] bg-[var(--radioactive-light)] max-w-xl w-full px-4 pt-3 pb-8 rounded-3xl space-y-6;
+  @apply text-[var(--no-black)] bg-[var(--radioactive-light)] max-w-md w-full px-4 pt-3 pb-4 rounded-3xl space-y-6;
 }
 
 .service {
@@ -63,5 +63,99 @@
 
   img {
     @apply object-cover bg-[var(--no-black)] rounded-3xl select-none;
+  }
+}
+
+.keychain-container {
+  @apply grid grid-cols-2 gap-6 place-items-center;
+
+  .keychain-card {
+    @apply flex flex-col items-center justify-center gap-3;
+  }
+
+  > :last-child {
+    @apply col-span-2;
+  }
+}
+
+.dark-scheme {
+  @apply bg-[var(--no-black)] text-[var(--no-white)];
+}
+
+.pink-card {
+  @apply bg-[var(--taffy)] text-[var(--no-black)] max-w-md w-full px-4 pt-3 pb-4 rounded-3xl space-y-6;
+}
+
+.art-gallery-container {
+  @apply grid grid-cols-2 grid-rows-2 gap-3;
+
+  > :first-child {
+    @apply row-span-2 h-full;
+  }
+  img {
+    @apply object-cover bg-[var(--bare-white)] rounded-3xl select-none;
+  }
+}
+
+.sacrificio-card {
+  @apply bg-[var(--no-white)] text-[var(--no-white)] max-w-md w-full rounded-3xl overflow-hidden;
+
+  .header-image-container {
+    @apply flex justify-center;
+    img {
+      @apply object-cover bg-[var(--no-black)] select-none aspect-16/9;
+    }
+  }
+
+  .sacrificio-content {
+    @apply p-4 text-[var(--no-black)] flex flex-col justify-center items-center px-4 pt-3 pb-4 gap-y-6;
+    p {
+      @apply text-sm;
+    }
+  }
+
+  iframe {
+    @apply w-3/4 aspect-video;
+  }
+
+  h2 {
+    @apply w-full text-3xl;
+  }
+}
+
+.sb-container {
+  @apply flex flex-col gap-1.5 w-full;
+
+  .merch-list {
+    @apply grid grid-cols-2 gap-y-4 gap-x-2;
+
+    .merch-item {
+      @apply text-center space-y-1.5;
+      .merch-badge {
+        @apply text-[var(--no-gray)];
+      }
+      img {
+        @apply aspect-square object-contain bg-[var(--bare-white)] p-4;
+      }
+    }
+  }
+}
+
+.event-list {
+  @apply flex flex-row gap-2 overflow-x-auto;
+
+  img {
+    @apply aspect-9/16 w-1/3 object-cover bg-[var(--bare-white)] select-none;
+  }
+}
+
+.social-links {
+  @apply flex flex-row gap-2;
+
+  a {
+    @apply text-[var(--no-black)] bg-[var(--no-black)] p-3 hover:bg-[var(--radioactive-light)] transition-colors;
+    svg {
+      @apply w-6 h-6 fill-[var(--no-white)];
+    }
   }
 }
