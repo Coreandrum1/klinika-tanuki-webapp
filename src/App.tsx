@@ -83,7 +83,7 @@ function App() {
       </header>
 
       <main className="wrapper">
-        <section className="container">
+        <section className="content-container">
           <article className="flex flex-col w-full h-screen gap-4 hero">
             <div className="hero-content">
               <a

@@ -1,10 +1,14 @@
 @reference "tailwindcss";
-.container {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-4 px-2 h-auto place-items-start mt-16;
+
+.wrapper {
+  @apply max-w-[1400px] w-full;
+}
+.content-container {
+  @apply grid grid-cols-1 gap-4 px-2 w-full place-items-center mt-16;
 }
 
 .white-card {
-  @apply text-[var(--no-black)] bg-[var(--no-white)] max-w-md w-full px-3 pt-2 pb-8 rounded-3xl space-y-3;
+  @apply text-[var(--no-black)] bg-[var(--no-white)] max-w-xl w-full px-3 pt-2 pb-8 rounded-3xl space-y-3;
 
   .image-container {
     @apply flex flex-row gap-3 justify-start mb-4;
@@ -33,7 +37,7 @@
 }
 
 .outline-card {
-  @apply text-[var(--radioactive)] max-w-md w-full px-4 py-4 rounded-3xl space-y-3 border-2;
+  @apply text-[var(--radioactive)] max-w-xl w-full px-4 py-4 rounded-3xl space-y-3 border-2;
 
   .sticker-container {
     @apply grid grid-cols-3 grid-rows-2 gap-2 justify-items-center items-center;
@@ -51,7 +55,7 @@
 }
 
 .radioactive-card {
-  @apply text-[var(--no-black)] bg-[var(--radioactive-light)] max-w-md w-full px-4 pt-3 pb-4 rounded-3xl space-y-6;
+  @apply text-[var(--no-black)] bg-[var(--radioactive-light)] max-w-xl w-full px-4 pt-3 pb-4 rounded-3xl space-y-6;
 }
 
 .service {
@@ -83,7 +87,7 @@
 }
 
 .pink-card {
-  @apply bg-[var(--taffy)] text-[var(--no-black)] max-w-md w-full px-4 pt-3 pb-4 rounded-3xl space-y-6;
+  @apply bg-[var(--taffy)] text-[var(--no-black)] max-w-xl w-full px-4 pt-3 pb-4 rounded-3xl space-y-6;
 }
 
 .art-gallery-container {
@@ -98,7 +102,7 @@
 }
 
 .sacrificio-card {
-  @apply bg-[var(--no-white)] text-[var(--no-white)] max-w-md w-full rounded-3xl overflow-hidden;
+  @apply bg-[var(--no-white)] text-[var(--no-white)] max-w-xl w-full rounded-3xl overflow-hidden;
 
   .header-image-container {
     @apply flex justify-center;
@@ -204,11 +208,11 @@ header {
 }
 
 .hero-title {
-  @apply text-8xl uppercase;
+  @apply text-8xl lg:text-9xl uppercase;
 }
 
 .hero-content {
-  @apply h-2/5 rounded-3xl flex flex-col justify-between p-3;
+  @apply h-2/5 lg:h-1/2 rounded-3xl flex flex-col justify-between p-3;
   background-image: linear-gradient(
       to top,
       rgba(42, 36, 37, 0.99) 0%,
