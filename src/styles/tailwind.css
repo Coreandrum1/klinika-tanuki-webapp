@@ -31,16 +31,16 @@
 
   p {
     font-family: "Roboto Mono", monospace;
-    @apply font-normal leading-4 text-sm;
+    @apply font-normal leading-4 lg:leading-6 text-sm lg:text-base;
   }
 
   button {
     font-family: "Anton", sans-serif;
-    @apply font-normal uppercase text-base;
+    @apply font-normal uppercase text-base lg:text-lg;
   }
 
   .chip {
     font-family: "Anton", sans-serif;
-    @apply font-normal uppercase text-base;
+    @apply font-normal uppercase text-base lg:text-lg;
   }
 }
