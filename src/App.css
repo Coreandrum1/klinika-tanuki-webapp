@@ -283,7 +283,7 @@ header {
 
   .category-chip {
     font-family: "Anton", sans-serif;
-    @apply bg-[var(--radioactive)] uppercase px-3 py-2 rounded-3xl leading-4;
+    @apply uppercase px-3 py-2 rounded-3xl leading-4;
     &:hover {
       @apply bg-[var(--radioactive-light)] cursor-pointer;
     }

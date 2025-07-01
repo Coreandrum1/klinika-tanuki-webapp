@@ -27,61 +27,14 @@ import { Instagram } from "./assets/icons/Instagram";
 import { Facebook } from "./assets/icons/Facebook";
 import { Youtube } from "./assets/icons/Youtube";
 import { Bandcamp } from "./assets/icons/Bandcamp";
-import { Hamburger } from "./assets/icons/Hamburger";
-import { useState } from "react";
+
 import { Marker } from "./assets/icons/Marker";
+import { Navbar } from "./components/Navbar";
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <>
-      <header>
-        <nav className="main-nav">
-          <a href="/" className="logo">
-            KT colectivo
-          </a>
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="menu-button"
-          >
-            <Hamburger />
-          </button>
-        </nav>
-        <nav
-          className={`mobile-menu ${
-            isMenuOpen ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"
-          }`}
-        >
-          <ul className={`menu-list`} onClick={() => setIsMenuOpen(false)}>
-            <li>
-              <a href="#bazar-shop">Bazar Shop</a>
-            </li>
-            <li>
-              <a href="#stickers">Stickers</a>
-            </li>
-            <li>
-              <a href="#services">Servicios</a>
-            </li>
-            <li>
-              <a href="#plushies">Peluches</a>
-            </li>
-            <li>
-              <a href="#keychains">Llaveros</a>
-            </li>
-            <li>
-              <a href="#art">Arte</a>
-            </li>
-            <li>
-              <a href="#sacrificio-barbarico">Sacrificio Barbárico</a>
-            </li>
-            <li>
-              <a href="#contact">Contacto</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
+      <Navbar />
       <main className="w-full px-4">
         <div className="hero-content">
           <a
@@ -118,12 +71,21 @@ function App() {
             </div>
           </div>
           <div className="categories-container">
-            <div className="category-chip">bazar</div>
-            <div className="category-chip">arte</div>
-            <div className="category-chip">stcikers</div>
-            <div className="category-chip">impresión</div>
-            <div className="category-chip">música</div>
-            <div className="category-chip">artesanías</div>
+            <div className="category-chip bg-[var(--radioactive)] ">bazar</div>
+            <div className="category-chip bg-[var(--radioactive)] ">arte</div>
+            <div className="category-chip bg-[var(--radioactive)] ">
+              stcikers
+            </div>
+            <div className="category-chip bg-[var(--radioactive)] ">
+              impresión
+            </div>
+            <div className="category-chip bg-[var(--radioactive)] ">música</div>
+            <div className="category-chip bg-[var(--radioactive)] ">
+              artesanías
+            </div>
+            <div className="category-chip bg-[var(--no-white)] ">
+              sacrificio barbarico
+            </div>
           </div>
           <div className="px-4 lg:max-w-lg">
             <p>
