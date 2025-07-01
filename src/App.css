@@ -4,7 +4,7 @@
   @apply max-w-[1400px] w-full;
 }
 .content-container {
-  @apply grid grid-cols-1 gap-4 px-2 w-full place-items-center mt-16;
+  @apply grid grid-cols-1 gap-4 px-2 w-full place-items-center;
 }
 
 .white-card {
@@ -212,22 +212,26 @@ header {
 }
 
 .hero-content {
-  @apply h-2/5 lg:h-1/2 rounded-3xl flex flex-col justify-between p-3;
-  background-image: linear-gradient(
+  @apply h-[calc(50vh)] lg:max-h-[50rem] w-full rounded-3xl flex flex-col justify-between items-center p-3 mt-16;
+  background-image: url("./assets/images/hero.webp");
+  border-image: fill 0
+    linear-gradient(
       to top,
-      rgba(42, 36, 37, 0.99) 0%,
-      rgba(42, 36, 37, 0.85) 30%,
+      rgba(42, 36, 37, 1) 0%,
+      rgba(42, 36, 37, 1) 20%,
+      rgba(42, 36, 37, 0.85) 40%,
       rgba(42, 36, 37, 0.6) 55%,
       rgba(42, 36, 37, 0) 90%,
       rgba(42, 36, 37, 0) 100%
-    ),
-    url("./assets/images/hero.webp");
+    );
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center 40%;
+  min-height: 0;
 }
 
 .hero-instagram-link {
-  @apply w-fit right-4 bg-[var(--taffy)] p-3 rounded-full flex items-center gap-2;
+  @apply w-fit right-4 bg-[var(--taffy)] p-3 rounded-full flex self-start items-center gap-2;
   svg {
     @apply w-6 h-6 fill-[var(--no-black)];
   }

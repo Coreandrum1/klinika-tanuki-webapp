@@ -82,23 +82,26 @@ function App() {
         </nav>
       </header>
 
+      <main className="w-full px-4">
+        <div className="hero-content">
+          <a
+            href="https://www.instagram.com/sacrificiobarbarico/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-instagram-link"
+          >
+            <Instagram />
+          </a>
+          <div className="wrapper">
+            <div className="flex flex-col justify-end flex-1 px-4">
+              <h1 className="hero-title">Klinika Tanuki</h1>
+            </div>
+          </div>
+        </div>
+      </main>
       <main className="wrapper">
         <section className="content-container">
-          <article className="flex flex-col w-full h-screen gap-4 hero">
-            <div className="hero-content">
-              <a
-                href="https://www.instagram.com/sacrificiobarbarico/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-instagram-link"
-              >
-                <Instagram />
-              </a>
-              <div>
-                <h1 className="hero-title">Klinika</h1>
-                <h1 className="hero-title">Tanuki</h1>
-              </div>
-            </div>
+          <article className="flex flex-col w-full gap-4 hero">
             <div className="upcoming-events-container">
               <div className="event-title-container">
                 <Marker />
@@ -123,7 +126,7 @@ function App() {
               <div className="category-chip">música</div>
               <div className="category-chip">artesanías</div>
             </div>
-            <div className="px-4 ">
+            <div className="px-4 lg:max-w-lg">
               <p>
                 Colectivo de artistas y creadores independientes de Ensenada,
                 Baja California.
@@ -263,7 +266,9 @@ function App() {
                   </div>
                 </div>
               </div>
-              <button className="content-link dark-scheme">contáctanos</button>
+              <button className="content-link dark-scheme">
+                Consulta existencias
+              </button>
               <div className="sb-container">
                 <h2>Eventos</h2>
                 <div className="event-list">
