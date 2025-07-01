@@ -46,14 +46,14 @@ function App() {
             <Instagram />
           </a>
           <div className="wrapper">
-            <div className="flex flex-col justify-end flex-1 px-4">
+            <div className="flex flex-col justify-end flex-1">
               <h1 className="hero-title">Klinika Tanuki</h1>
             </div>
           </div>
         </div>
       </main>
       <main className="flex flex-col items-center gap-12 wrapper">
-        <article className="flex flex-col w-full gap-4 hero">
+        <article className="flex flex-col w-full gap-4 p-4 hero">
           <div className="upcoming-events-container">
             <div className="event-title-container">
               <Marker />
