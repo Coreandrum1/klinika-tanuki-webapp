@@ -85,7 +85,7 @@ function App() {
       <main className="w-full px-4">
         <div className="hero-content">
           <a
-            href="https://www.instagram.com/sacrificiobarbarico/"
+            href="https://www.instagram.com/klinika_tanuki/"
             target="_blank"
             rel="noopener noreferrer"
             className="hero-instagram-link"
@@ -109,11 +109,11 @@ function App() {
             <div className="event-list">
               <div className="event-item">
                 <h3>Paralelicuaro</h3>
-                <h4>09/12/25</h4>
+                <h4>(por confirmar)</h4>
               </div>
               <div className="event-item">
                 <h3>StickerLand</h3>
-                <h4>09/12/25</h4>
+                <h4>(por confirmar)</h4>
               </div>
             </div>
           </div>
@@ -166,7 +166,11 @@ function App() {
                 <div className="chip">@PEPPERJAM_ART</div>
                 <div className="chip">@aleescamillapv</div>
               </div>
-              <button className="content-link">Ver galería</button>
+              <button className="content-link">
+                <a href="/" rel="noopener noreferrer">
+                  Ver galería
+                </a>
+              </button>
             </article>
             <article className="radioactive-card">
               <h2 className="font-title">Servicios</h2>
@@ -182,7 +186,9 @@ function App() {
                 <div className="chip">desarrollo web</div>
                 <p>Te creamos tu sitio web o menú interactivo</p>
               </div>
-              <button className="content-link dark-scheme">Contáctanos</button>
+              <button className="content-link dark-scheme">
+                <a href="/">Contáctanos</a>
+              </button>
             </article>
             <article className="white-card">
               <h2 className="font-title">Peluches</h2>
@@ -213,7 +219,9 @@ function App() {
               <p className="text-[var(--no-white)]">
                 Llaveros de acrílico con arte y diseño propio
               </p>
-              <button className="content-link">Ver diseños</button>
+              <button className="content-link">
+                <a href="/">ver diseños</a>
+              </button>
             </article>
             <article className="pink-card">
               <h2 className="font-title">Arte</h2>
@@ -227,7 +235,9 @@ function App() {
                 <div className="chip">@PEPPERJAM_ART</div>
                 <div className="chip">@aleescamillapv</div>
               </div>
-              <button className="content-link dark-scheme">ver galería</button>
+              <button className="content-link dark-scheme">
+                <a href="/">ver galería</a>
+              </button>
             </article>
             <article className="sacrificio-card">
               <div className="header-image-container">
@@ -268,7 +278,13 @@ function App() {
                   </div>
                 </div>
                 <button className="content-link dark-scheme">
-                  Consulta existencias
+                  <a
+                    href="https://www.facebook.com/messages/t/101324469166800"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Consulta existencias
+                  </a>
                 </button>
                 <div className="sb-container">
                   <h2>Eventos</h2>
@@ -283,28 +299,28 @@ function App() {
                   <h2>Contacto</h2>
                   <div className="social-links">
                     <a
-                      href="https://www.instagram.com/sacrificiobarbarico/"
+                      href="https://www.instagram.com/sacrificio.barbaricopv/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <Instagram />
                     </a>{" "}
                     <a
-                      href="https://www.instagram.com/sacrificiobarbarico/"
+                      href="https://www.facebook.com/SACRIFICIOBARBARICOPV"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <Facebook />
                     </a>{" "}
                     <a
-                      href="https://www.instagram.com/sacrificiobarbarico/"
+                      href="https://www.youtube.com/@SACRIFICIOBARBARICO"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <Youtube />
                     </a>{" "}
                     <a
-                      href="https://www.instagram.com/sacrificiobarbarico/"
+                      href="https://sacrificiobarbarico.bandcamp.com/album/ep-1-sin-saber-afinar"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -325,7 +341,15 @@ function App() {
               <div className="chip-container">
                 <div className="chip">@klinika_tanuki</div>
               </div>
-              <button className="content-link dark-scheme">Contáctanos</button>
+              <button className="content-link dark-scheme">
+                <a
+                  href="https://www.instagram.com/klinika_tanuki/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Contáctanos
+                </a>
+              </button>
             </article>
           </section>
           <footer>
