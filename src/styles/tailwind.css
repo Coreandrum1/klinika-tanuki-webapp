@@ -49,23 +49,22 @@
 }
 
 @layer utilities {
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in {
+      opacity: 0;
+      transform: translateY(10rem) scale(0.95);
+      animation: fade-in cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40vh;
+    }
+  }
   @keyframes fade-in {
-    0% {
+    20% {
       opacity: 0;
     }
-
     100% {
       opacity: 1;
+      transform: translateY(0) scale(1);
     }
-  }
-
-  .fade-in {
-    animation: fade-in cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    animation-timeline: view();
-    animation-range: entry 0% cover 30%;
-  }
-
-  .no-fade-in {
-    animation: none;
   }
 }
