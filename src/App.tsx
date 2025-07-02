@@ -96,7 +96,7 @@ function App() {
         </article>
         <div className="max-w-6xl px-4">
           <section className="content-container">
-            <article className="white-card">
+            <article className="white-card fade-in">
               <h2 className="font-title">Bazar Shop</h2>
               <div className="image-container">
                 <img className="first-image" src={kewpie} alt="" />
@@ -112,7 +112,7 @@ function App() {
                 tiempo{" "}
               </p>
             </article>
-            <article className="outline-card">
+            <article className="outline-card fade-in">
               <h2 className="font-title">stickers</h2>
               <div className="sticker-container">
                 <img src={theBeatles} alt="" />
@@ -134,7 +134,7 @@ function App() {
                 </a>
               </button>
             </article>
-            <article className="radioactive-card">
+            <article className="radioactive-card fade-in">
               <h2 className="font-title">Servicios</h2>
               <div className="service">
                 <div className="chip">diseño gráfico</div>
@@ -152,7 +152,7 @@ function App() {
                 <a href="/">Contáctanos</a>
               </button>
             </article>
-            <article className="white-card">
+            <article className="white-card fade-in">
               <h2 className="font-title">Peluches</h2>
               <div className="image-container-even">
                 <img className="first-image" src={plushieBrown} alt="" />
@@ -161,7 +161,7 @@ function App() {
               <p className="description">Peluches/llavero hechos a mano</p>
               <div className="chip">@PEPPERJAM_ART</div>
             </article>
-            <article className="outline-card">
+            <article className="outline-card fade-in">
               <h2 className="font-title">llaveros</h2>
               <div className="keychain-container">
                 <div className="keychain-card">
@@ -185,7 +185,7 @@ function App() {
                 <a href="/">ver diseños</a>
               </button>
             </article>
-            <article className="pink-card">
+            <article className="pink-card fade-in">
               <h2 className="font-title">Arte</h2>
               <div className="art-gallery-container">
                 <img className="second-image" src={artMalice} alt="" />
@@ -201,7 +201,7 @@ function App() {
                 <a href="/">ver galería</a>
               </button>
             </article>
-            <article className="sacrificio-card">
+            <article className="sacrificio-card fade-in">
               <div className="header-image-container">
                 <img src={sbCover} alt="" />
               </div>
@@ -293,7 +293,7 @@ function App() {
                 <p className="uppercase">@sacrificio.barbaricopv</p>
               </div>
             </article>
-            <article className="pink-card">
+            <article className="pink-card fade-in">
               <h2 className="font-title">Contacto</h2>
               <p className="description">
                 Si quieres ver más de nuestros productos, o quieres que te
