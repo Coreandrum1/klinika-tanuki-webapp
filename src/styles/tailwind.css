@@ -64,7 +64,7 @@
   .fade-in {
     animation: fade-in cubic-bezier(0.4, 0, 0.2, 1) forwards;
     animation-timeline: view();
-    animation-range: cover cover 30rem;
+    animation-range: entry 0% cover 30rem;
   }
 
   .no-fade-in {
