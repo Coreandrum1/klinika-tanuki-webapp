@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --no-black: #2a2425;
+  --no-black-lighter: #2a2425;
+  --no-black: #201b1c;
   --no-gray: #8a867d;
   --no-white: #d0cec9;
   --bare-white: #f3f3f3;
@@ -14,6 +15,7 @@
   html,
   body {
     @apply bg-[var(--no-black)] text-[var(--no-white)];
+    background-image: url("../assets/dark-tire.png");
   }
   #root {
     @apply flex flex-col items-center justify-center;
