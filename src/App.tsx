@@ -30,8 +30,8 @@ import { Bandcamp } from "./assets/icons/Bandcamp";
 
 import { Marker } from "./assets/icons/Marker";
 import { Navbar } from "./components/Navbar";
-import { useState } from "react";
-import dayjs from "dayjs";
+import { ReactNode, useState } from "react";
+import dayjs, { Dayjs } from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import "dayjs/locale/es";
 import updateLocale from "dayjs/plugin/updateLocale";
@@ -44,27 +44,35 @@ dayjs.locale("es");
 
 interface Event {
   id: string;
-  name: string;
+  name: string | ReactNode;
   startDate: dayjs.Dayjs;
   endDate: dayjs.Dayjs;
   relativeTime: string;
 }
 
+const isCloseToEvent = (date: Dayjs) => {
+  const now = dayjs();
+  const diffInDays = date.diff(now, "days");
+  return diffInDays <= 3 && diffInDays >= 0;
+};
+
+const isWithinTimeInterval = (event: Event) => {
+  const now = dayjs();
+  return now.isBefore(event.endDate) && now.isAfter(event.startDate);
+};
+
 function App() {
-  const [events, setEvents] = useState<Event[]>([
+  const [events] = useState<Event[]>([
     {
       id: "1",
-      name: "Paralelicuaro - Festival de las luces",
+      name: <h3>Paralelicuaro - Festival de las luces</h3>,
       startDate: dayjs("2025-10-26T13:00:00"),
       endDate: dayjs("2025-10-26T21:00:00"),
-      relativeTime: dayjs().to(dayjs("2025-10-26T13:00:00")),
+      relativeTime: isCloseToEvent(dayjs("2025-10-26T13:00:00"))
+        ? dayjs().to("2025-10-26")
+        : dayjs("2025-10-26T13:00:00").format("D [de] MMMM [de] YYYY, h:mm A"),
     },
   ]);
-
-  const isWithinTimeInterval = (event: Event) => {
-    const now = dayjs();
-    return now.isBefore(event.endDate) && now.isAfter(event.startDate);
-  };
 
   return (
     <>
@@ -96,7 +104,7 @@ function App() {
             <div className="event-list">
               {events.map((event) => (
                 <div key={event.id} className="event-item">
-                  <h3>{event.name}</h3>
+                  {event.name}
                   <h4 style={{ textTransform: "capitalize" }}>
                     {isWithinTimeInterval(event)
                       ? "Estamos en el evento!"
