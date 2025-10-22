@@ -36,6 +36,8 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import "dayjs/locale/es";
 import updateLocale from "dayjs/plugin/updateLocale";
 import localizedFormat from "dayjs/plugin/localizedFormat";
+import { Banner } from "./components/Banner";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/16/solid";
 
 dayjs.extend(relativeTime);
 dayjs.extend(localizedFormat);
@@ -65,7 +67,18 @@ function App() {
   const [events] = useState<Event[]>([
     {
       id: "1",
-      name: <h3>Paralelicuaro - Festival de las luces</h3>,
+      name: (
+        <div className="flex gap-2">
+          <h3>Paralelicuaro - Festival de las luces</h3>
+          <a
+            href="https://www.facebook.com/share/1G78ME7JHw/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ArrowTopRightOnSquareIcon className="h-7 rounded-md hover:text-[var(--no-black)] hover:bg-[var(--radioactive)] hover:cursor-pointer" />
+          </a>
+        </div>
+      ),
       startDate: dayjs("2025-10-26T13:00:00"),
       endDate: dayjs("2025-10-26T21:00:00"),
       relativeTime: isCloseToEvent(dayjs("2025-10-26T13:00:00"))
@@ -76,6 +89,7 @@ function App() {
 
   return (
     <>
+      <Banner />
       <Navbar />
       <main className="w-full px-4">
         <div className="hero-content">
@@ -141,7 +155,7 @@ function App() {
         <div className="max-w-6xl px-4">
           <section className="content-container">
             <article className="white-card fade-in">
-              <h2 className="font-title">Bazar Shop</h2>
+              <h2 className="font-title">Bazar</h2>
               <div className="image-container">
                 <img className="first-image" src={kewpie} alt="" />
                 <img className="second-image" src={alice} alt="" />
@@ -174,7 +188,7 @@ function App() {
               </div>
               <button className="content-link">
                 <a href="/" rel="noopener noreferrer">
-                  Ver galería
+                  próximamente...
                 </a>
               </button>
             </article>
@@ -226,7 +240,7 @@ function App() {
                 Llaveros de acrílico con arte y diseño propio
               </p>
               <button className="content-link">
-                <a href="/">ver diseños</a>
+                <a href="/">próximamente...</a>
               </button>
             </article>
             <article className="pink-card fade-in">
@@ -242,7 +256,7 @@ function App() {
                 <div className="chip">@aleescamillapv</div>
               </div>
               <button className="content-link dark-scheme">
-                <a href="/">ver galería</a>
+                <a href="/">próximamente...</a>
               </button>
             </article>
             <article className="sacrificio-card fade-in">

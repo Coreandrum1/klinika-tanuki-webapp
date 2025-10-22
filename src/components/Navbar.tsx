@@ -18,9 +18,29 @@ export const Navbar = () => {
         setIsMenuOpen(false);
       }
     };
+
+    const handleKey = (ev: KeyboardEvent) => {
+      if (ev.key === "Escape") setIsMenuOpen(false);
+    };
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKey);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKey);
+    };
   }, [isMenuOpen]);
+
+  const navLinks = [
+    { href: "#bazar-shop", label: "Bazar" },
+    { href: "#stickers", label: "Stickers" },
+    { href: "#services", label: "Servicios" },
+    { href: "#plushies", label: "Peluches" },
+    { href: "#keychains", label: "Llaveros" },
+    { href: "#art", label: "Arte" },
+    { href: "#sacrificio-barbarico", label: "Sacrificio Barbárico" },
+    { href: "#contact", label: "Contacto" },
+  ];
 
   return (
     <header>
@@ -28,14 +48,31 @@ export const Navbar = () => {
         <a href="/" className="logo">
           KT colectivo
         </a>
+
+        {/* Desktop links: hidden on small screens, visible on lg and above */}
+        <ul className="items-center hidden gap-8 lg:flex">
+          {navLinks.map((l) => (
+            <li key={l.href}>
+              <a href={l.href}>
+                <p>{l.label}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        {/* Hamburger: visible on small screens only */}
         <button
           ref={hamburgerRef}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="menu-button"
+          className="menu-button lg:hidden"
+          aria-expanded={isMenuOpen}
+          aria-label="Toggle menu"
         >
           <Hamburger />
         </button>
       </nav>
+
+      {/* Mobile menu (keeps original behavior) */}
       <nav
         ref={menuRef}
         className={`mobile-menu ${
@@ -43,49 +80,13 @@ export const Navbar = () => {
         }`}
       >
         <ul className="menu-list">
-          <li>
-            <a href="#bazar-shop" onClick={() => setIsMenuOpen(false)}>
-              Bazar Shop
-            </a>
-          </li>
-          <li>
-            <a href="#stickers" onClick={() => setIsMenuOpen(false)}>
-              Stickers
-            </a>
-          </li>
-          <li>
-            <a href="#services" onClick={() => setIsMenuOpen(false)}>
-              Servicios
-            </a>
-          </li>
-          <li>
-            <a href="#plushies" onClick={() => setIsMenuOpen(false)}>
-              Peluches
-            </a>
-          </li>
-          <li>
-            <a href="#keychains" onClick={() => setIsMenuOpen(false)}>
-              Llaveros
-            </a>
-          </li>
-          <li>
-            <a href="#art" onClick={() => setIsMenuOpen(false)}>
-              Arte
-            </a>
-          </li>
-          <li>
-            <a
-              href="#sacrificio-barbarico"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Sacrificio Barbárico
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={() => setIsMenuOpen(false)}>
-              Contacto
-            </a>
-          </li>
+          {navLinks.map((l) => (
+            <li key={l.href}>
+              <a href={l.href} onClick={() => setIsMenuOpen(false)}>
+                {l.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

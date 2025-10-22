@@ -186,7 +186,7 @@ footer {
 }
 
 header {
-  @apply w-full bg-[var(--no-black)] top-0 text-[var(--no-white)] fixed z-50 h-16;
+  @apply w-full bg-[var(--no-black)] top-0 text-[var(--no-white)] sticky z-50 h-16;
 }
 .main-nav {
   @apply px-4 w-full h-full  flex items-center justify-between bg-[var(--no-black)] text-[var(--no-white)];
@@ -222,7 +222,8 @@ header {
 }
 
 .hero-content {
-  @apply relative h-[calc(50vh)] lg:max-h-[50rem] w-full rounded-lg flex flex-col justify-between items-center p-3 mt-16 overflow-hidden;
+  @apply relative h-[calc(50vh)] lg:max-h-[50rem] w-full rounded-lg flex flex-col justify-between items-center p-3 overflow-hidden;
+  /* mt-16 */
 }
 
 .hero-content::before {
