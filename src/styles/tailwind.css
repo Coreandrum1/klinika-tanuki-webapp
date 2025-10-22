@@ -2,14 +2,14 @@
 @tailwind utilities;
 
 @theme {
-  --no-black-lighter: #2a2425;
-  --no-black: #201b1c;
-  --no-gray: #8a867d;
-  --no-white: #d0cec9;
-  --bare-white: #f3f3f3;
-  --radioactive: #b0d439;
-  --radioactive-light: #c1db6b;
-  --taffy: #ef8ccc;
+  --no-black-lighter: #2f2729;
+  --no-black: #1e191a;
+  --no-gray: #8f8981;
+  --no-white: #e6e3df;
+  --bare-white: #f4f3f2;
+  --radioactive: #aedb33;
+  --radioactive-light: #cfe874;
+  --taffy: #fb82c4;
 }
 
 @layer base {

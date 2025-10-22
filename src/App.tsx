@@ -30,8 +30,42 @@ import { Bandcamp } from "./assets/icons/Bandcamp";
 
 import { Marker } from "./assets/icons/Marker";
 import { Navbar } from "./components/Navbar";
+import { useState } from "react";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+import "dayjs/locale/es";
+import updateLocale from "dayjs/plugin/updateLocale";
+import localizedFormat from "dayjs/plugin/localizedFormat";
+
+dayjs.extend(relativeTime);
+dayjs.extend(localizedFormat);
+dayjs.extend(updateLocale);
+dayjs.locale("es");
+
+interface Event {
+  id: string;
+  name: string;
+  startDate: dayjs.Dayjs;
+  endDate: dayjs.Dayjs;
+  relativeTime: string;
+}
 
 function App() {
+  const [events, setEvents] = useState<Event[]>([
+    {
+      id: "1",
+      name: "Paralelicuaro - Festival de las luces",
+      startDate: dayjs("2025-10-26T13:00:00"),
+      endDate: dayjs("2025-10-26T21:00:00"),
+      relativeTime: dayjs().to(dayjs("2025-10-26T13:00:00")),
+    },
+  ]);
+
+  const isWithinTimeInterval = (event: Event) => {
+    const now = dayjs();
+    return now.isBefore(event.endDate) && now.isAfter(event.startDate);
+  };
+
   return (
     <>
       <Navbar />
@@ -60,14 +94,16 @@ function App() {
               <h2>Próximos eventos</h2>
             </div>
             <div className="event-list">
-              <div className="event-item">
-                <h3>Paralelicuaro</h3>
-                <h4>(por confirmar)</h4>
-              </div>
-              <div className="event-item">
-                <h3>StickerLand</h3>
-                <h4>(por confirmar)</h4>
-              </div>
+              {events.map((event) => (
+                <div key={event.id} className="event-item">
+                  <h3>{event.name}</h3>
+                  <h4 style={{ textTransform: "capitalize" }}>
+                    {isWithinTimeInterval(event)
+                      ? "Estamos en el evento!"
+                      : event.relativeTime}
+                  </h4>
+                </div>
+              ))}
             </div>
           </div>
           <div className="categories-container">
@@ -109,7 +145,7 @@ function App() {
               </div>
               <p className="description">
                 Le buscamos un nuevo hogar a todos esos objetos olvidados en el
-                tiempo{" "}
+                tiempo
               </p>
             </article>
             <article className="outline-card fade-in">

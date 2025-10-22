@@ -13,12 +13,12 @@
 }
 
 .white-card {
-  @apply text-[var(--no-black)] bg-[var(--no-white)] max-w-lg w-full px-3 lg:px-8 lg:py-8 pt-2 pb-8 rounded-[20px] space-y-3 lg:space-y-6;
+  @apply text-[var(--no-black)] bg-[var(--no-white)] max-w-lg w-full px-3 lg:px-8 lg:py-8 pt-2 pb-8 rounded-lg space-y-3 lg:space-y-6;
 
   .image-container {
     @apply flex flex-row gap-3 justify-start mb-4;
     img {
-      @apply aspect-square object-cover bg-[var(--no-black)] rounded-[20px] select-none;
+      @apply aspect-square object-cover bg-[var(--no-black)] rounded-lg select-none;
     }
 
     .first-image {
@@ -42,7 +42,7 @@
 }
 
 .outline-card {
-  @apply text-[var(--radioactive)] max-w-lg w-full px-4 py-4 lg:px-8 lg:py-8 rounded-[20px] space-y-3 lg:space-y-6 border-2;
+  @apply text-[var(--radioactive)] max-w-lg w-full px-4 py-4 lg:px-8 lg:py-8 rounded-lg space-y-3 lg:space-y-6 border-2;
 
   .sticker-container {
     @apply grid grid-cols-3 grid-rows-2 gap-2 justify-items-center items-center;
@@ -53,7 +53,7 @@
 }
 
 .content-link {
-  @apply bg-[var(--radioactive)] text-[var(--no-black)] h-10 flex gap-2 rounded-[20px] px-4 w-full;
+  @apply bg-[var(--radioactive)] text-[var(--no-black)] h-10 flex gap-2 rounded-lg px-4 w-full;
   &:hover {
     @apply underline;
   }
@@ -64,7 +64,7 @@
 }
 
 .radioactive-card {
-  @apply text-[var(--no-black)] max-w-lg bg-[var(--radioactive-light)] lg:space-y-6 lg:px-8 lg:py-8 w-full px-4 pt-3 pb-4 rounded-[20px] space-y-6;
+  @apply text-[var(--no-black)] max-w-lg bg-[var(--radioactive-light)] lg:space-y-6 lg:px-8 lg:py-8 w-full px-4 pt-3 pb-4 rounded-lg space-y-6;
 }
 
 .service {
@@ -75,7 +75,7 @@
   @apply grid grid-cols-2 gap-3;
 
   img {
-    @apply object-cover bg-[var(--no-black)] rounded-[20px] select-none;
+    @apply object-cover bg-[var(--no-black)] rounded-lg select-none;
   }
 }
 
@@ -96,7 +96,7 @@
 }
 
 .pink-card {
-  @apply bg-[var(--taffy)] text-[var(--no-black)] max-w-lg lg:space-y-6 lg:px-8 lg:py-8 w-full px-4 pt-3 pb-4 rounded-[20px] space-y-6;
+  @apply bg-[var(--taffy)] text-[var(--no-black)] max-w-lg lg:space-y-6 lg:px-8 lg:py-8 w-full px-4 pt-3 pb-4 rounded-lg space-y-6;
 }
 
 .art-gallery-container {
@@ -106,12 +106,12 @@
     @apply row-span-2 h-full;
   }
   img {
-    @apply object-cover bg-[var(--bare-white)] rounded-[20px] select-none;
+    @apply object-cover bg-[var(--bare-white)] rounded-lg select-none;
   }
 }
 
 .sacrificio-card {
-  @apply bg-[var(--no-white)] text-[var(--no-white)] max-w-lg w-full rounded-[20px] overflow-hidden;
+  @apply bg-[var(--no-white)] text-[var(--no-white)] max-w-lg w-full rounded-lg overflow-hidden;
 
   .header-image-container {
     @apply flex justify-center;
@@ -209,7 +209,7 @@ header {
   @apply absolute w-full right-0 lg:w-md text-[var(--no-black)] z-50 transition-all;
 
   .menu-list {
-    @apply rounded-[20px] flex flex-col items-end justify-center gap-4 p-4 bg-[var(--radioactive-light)];
+    @apply rounded-lg flex flex-col items-end justify-center gap-4 p-4 bg-[var(--radioactive-light)];
     li {
       @apply text-3xl font-bold uppercase;
       font-family: "Barlow Condensed", sans-serif;
@@ -222,7 +222,7 @@ header {
 }
 
 .hero-content {
-  @apply relative h-[calc(50vh)] lg:max-h-[50rem] w-full rounded-[20px] flex flex-col justify-between items-center p-3 mt-16 overflow-hidden;
+  @apply relative h-[calc(50vh)] lg:max-h-[50rem] w-full rounded-lg flex flex-col justify-between items-center p-3 mt-16 overflow-hidden;
 }
 
 .hero-content::before {
@@ -294,7 +294,7 @@ header {
 
   .category-chip {
     font-family: "Anton", sans-serif;
-    @apply uppercase px-3 py-2 rounded-[20px] leading-4;
+    @apply uppercase px-3 py-2 rounded-lg leading-4;
     &:hover {
       @apply bg-[var(--radioactive-light)] cursor-pointer;
     }
