@@ -7,15 +7,21 @@ export const Banner = () => {
     <div
       className={`${
         isOpen ? "" : "hidden "
-      }bg-[var(--radioactive-light)] text-[var(--no-black)] text-center p-1 relative w-full`}
+      }bg-[var(--radioactive-light)] text-[var(--no-black)] p-1 w-full grid items-center [grid-template-columns:auto_minmax(0,1fr)_auto]`}
     >
-      <p>Nuestra página aún está en desarrollo</p>
-      <XMarkIcon
-        onClick={() => {
-          setIsOpen(false);
-        }}
-        className="absolute top-0 right-0 m-1 size-6 hover:text-[var(--radioactive-light)] hover:bg-[var(--no-black)] hover:cursor-pointer"
-      />
+      <div />
+      <p className="col-start-2 text-center">
+        Nuestra página aún está en desarrollo
+      </p>
+      <div className="flex justify-end col-start-3">
+        <button
+          aria-label="Cerrar banner"
+          onClick={() => setIsOpen(false)}
+          className="p-1 rounded hover:text-[var(--radioactive-light)] hover:bg-[var(--no-black)]"
+        >
+          <XMarkIcon className="w-6 h-6" />
+        </button>
+      </div>
     </div>
   );
 };
