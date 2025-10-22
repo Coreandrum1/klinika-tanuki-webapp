@@ -7,7 +7,7 @@ export const Banner = () => {
     <div
       className={`${
         isOpen ? "" : "hidden "
-      }bg-[var(--radioactive-light)] text-[var(--no-black)] p-1 w-full grid items-center [grid-template-columns:auto_minmax(0,1fr)_auto]`}
+      }bg-[var(--radioactive-light)] p-1 text-[var(--no-black)] w-full grid items-center [grid-template-columns:auto_minmax(0,1fr)_auto]`}
     >
       <div />
       <p className="col-start-2 text-center">
@@ -17,7 +17,7 @@ export const Banner = () => {
         <button
           aria-label="Cerrar banner"
           onClick={() => setIsOpen(false)}
-          className="p-1 rounded hover:text-[var(--radioactive-light)] hover:bg-[var(--no-black)]"
+          className="rounded hover:text-[var(--radioactive-light)] hover:bg-[var(--no-black)]"
         >
           <XMarkIcon className="w-6 h-6" />
         </button>
