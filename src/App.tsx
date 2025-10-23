@@ -224,15 +224,15 @@ function App() {
               <div className="keychain-container">
                 <div className="keychain-card">
                   <img src={keychainFront} alt="" />
-                  <p className="text-center description">Front</p>
+                  <p className="text-center description">Frontal</p>
                 </div>
                 <div className="keychain-card">
                   <img src={keychainBack} alt="" />
-                  <p className="text-center description">Back</p>
+                  <p className="text-center description">Trasera</p>
                 </div>
                 <div className="w-4/5 keychain-card">
                   <img src={keychainInside} alt="" />
-                  <p className="text-center description">Inside</p>
+                  <p className="text-center description">Interior</p>
                 </div>
               </div>
               <div className="chip">@CORIANDER_ESCAMILLA</div>
