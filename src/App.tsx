@@ -91,7 +91,7 @@ function App() {
     <>
       <Banner />
       <Navbar />
-      <main className="w-full px-4">
+      <main className="w-full px-2">
         <div className="hero-content">
           <a
             href="https://www.instagram.com/klinika_tanuki/"
@@ -109,7 +109,7 @@ function App() {
         </div>
       </main>
       <main className="flex flex-col items-center gap-12 wrapper">
-        <article className="flex flex-col w-full gap-4 p-4 hero">
+        <article className="flex flex-col w-full gap-4 p-2 hero">
           <div className="upcoming-events-container">
             <div className="event-title-container">
               <Marker />
@@ -152,7 +152,7 @@ function App() {
             </p>
           </div>
         </article>
-        <div className="max-w-6xl px-4">
+        <div className="max-w-6xl px-2">
           <section className="content-container">
             <article className="white-card fade-in">
               <h2 className="font-title">Bazar</h2>
