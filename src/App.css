@@ -301,3 +301,7 @@ header {
     }
   }
 }
+
+.capitalized-content::first-letter {
+  text-transform: capitalize;
+}

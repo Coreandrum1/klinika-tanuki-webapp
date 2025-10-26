@@ -64,6 +64,9 @@ const isWithinTimeInterval = (event: Event) => {
 };
 
 function App() {
+  const eventStartDate = "2025-10-26T13:00:00";
+  const eventEndDate = "2025-10-26T21:00:00";
+
   const [events] = useState<Event[]>([
     {
       id: "1",
@@ -79,11 +82,11 @@ function App() {
           </a>
         </div>
       ),
-      startDate: dayjs("2025-10-26T13:00:00"),
-      endDate: dayjs("2025-10-26T21:00:00"),
-      relativeTime: isCloseToEvent(dayjs("2025-10-26T13:00:00"))
-        ? dayjs().to("2025-10-26T13:00:00")
-        : dayjs("2025-10-26T13:00:00").format("D [de] MMMM [de] YYYY, h:mm A"),
+      startDate: dayjs(eventStartDate),
+      endDate: dayjs(eventEndDate),
+      relativeTime: isCloseToEvent(dayjs(eventStartDate))
+        ? dayjs().to(eventStartDate)
+        : dayjs(eventStartDate).format("D [de] MMMM [de] YYYY, h:mm A"),
     },
   ]);
 
@@ -119,9 +122,9 @@ function App() {
               {events.map((event) => (
                 <div key={event.id} className="event-item">
                   {event.name}
-                  <h4 style={{ textTransform: "capitalize" }}>
+                  <h4 className="capitalized-content">
                     {isWithinTimeInterval(event)
-                      ? "Estamos en el evento!"
+                      ? "estamos en el evento!"
                       : event.relativeTime}
                   </h4>
                 </div>
