@@ -82,7 +82,7 @@ function App() {
       startDate: dayjs("2025-10-26T13:00:00"),
       endDate: dayjs("2025-10-26T21:00:00"),
       relativeTime: isCloseToEvent(dayjs("2025-10-26T13:00:00"))
-        ? dayjs().to("2025-10-26")
+        ? dayjs().to("2025-10-26T13:00:00")
         : dayjs("2025-10-26T13:00:00").format("D [de] MMMM [de] YYYY, h:mm A"),
     },
   ]);
