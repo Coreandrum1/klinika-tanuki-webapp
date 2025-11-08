@@ -64,8 +64,8 @@ const isWithinTimeInterval = (event: Event) => {
 };
 
 function App() {
-  const eventStartDate = "2025-10-26T13:00:00";
-  const eventEndDate = "2025-10-26T21:00:00";
+  const eventStartDate = "2025-11-09T13:00:00";
+  const eventEndDate = "2025-11-09T21:00:00";
 
   const [events] = useState<Event[]>([
     {
