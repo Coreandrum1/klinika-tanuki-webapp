@@ -72,9 +72,9 @@ function App() {
       id: "1",
       name: (
         <div className="flex gap-2">
-          <h3>Paralelicuaro - Festival de las luces</h3>
+          <h3>Paralelicuaro - Bazar de otoño</h3>
           <a
-            href="https://www.facebook.com/share/1G78ME7JHw/"
+            href="https://www.instagram.com/p/DQsh9hfkXbZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -155,7 +155,7 @@ function App() {
             </p>
           </div>
         </article>
-        <div className="max-w-6xl px-2">
+        <div className="px-2 max-w-10xl">
           <section className="content-container">
             <article className="white-card fade-in">
               <h2 className="font-title">Bazar</h2>
